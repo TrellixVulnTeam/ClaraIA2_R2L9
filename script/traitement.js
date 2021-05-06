@@ -32,14 +32,15 @@ var levi=function levi(){
 		else{console.log('rien donc stop car wiki'); return}
 }
 			
-var indextraitement=function indextraitement(){txt=txt.trim()
+var indextraitement=function indextraitement(){
+	txt=txt.trim()
 console.log(txt+"recu en index")
 //console.log(JarvisIANomPlugins.length,"sssss")
 for(var i=0;i<JarvisIANomPlugins.length;i++){
 					for (var j=0;j<JarvisIAPlugins[JarvisIANomPlugins[i]].length;j++){//   console.log(JarvisIAPlugins[JarvisIANomPlugins[i]][j]) 
 				    	if(JarvisIAPlugins[JarvisIANomPlugins[i]][j].indexOf(txt)>-1){
 			     			console.log('')
-			     			console.log('FIND 1 : '+JarvisIANomPlugins[i])
+			     			console.log('FIND 3 : '+JarvisIANomPlugins[i])
 				     	
 			     			try{var temp=JarvisIAPlugins[JarvisIANomPlugins[i]][j+1]
 								for (var k=0;k<temp.length;k++){console.log(temp[k],"		 les datas");eval(temp[k])}
@@ -89,19 +90,19 @@ return
 var searchtraitement=function searchtraitement(){
 console.log("search : "+txt)
 for(var a=0;a<JarvisIAItemtab.length;a++){
-if(txt.search(JarvisIAItemtab[a])>-1){console.log('FIND 	 '+txt.search(JarvisIAItemtab[a])+" "+JarvisIAItemtab[a]);txt=JarvisIAItemtab[a];var a=JarvisIAItemtab.length+1}
+if(txt.search(JarvisIAItemtab[a])>-1){console.log('FIND 0	 '+txt.search(JarvisIAItemtab[a])+" "+JarvisIAItemtab[a]);txt=JarvisIAItemtab[a];var a=JarvisIAItemtab.length+1}
 }
 
 for(var i=0;i<JarvisIANomPlugins.length;i++){
 					for (var j=0;j<JarvisIAPlugins[JarvisIANomPlugins[i]].length;j++){
 							for(var k=0;k<JarvisIAPlugins[JarvisIANomPlugins[i]][j].length;k++){
 						
-								if(txt.search(JarvisIAPlugins[JarvisIANomPlugins[i]][j][k])>-1){
+								if(txt.search(JarvisIAPlugins[JarvisIANomPlugins[i]][j][k].replace(new RegExp("[^0-9a-zA-Zéâœèî,ôûë.àçù]", 'ig')," "))>-1){
 									console.log('');console.log("FIND 2 : ");console.log((JarvisIAPlugins[JarvisIANomPlugins[i]][j][k]))
 									console.log('')
 									try{
 										var temp=JarvisIAPlugins[JarvisIANomPlugins[i]][j+1];console.log('');console.log(JarvisIAPlugins[JarvisIANomPlugins[i]],"*****"+temp)
-										for (var k=0;k<temp.length;k++){console.log('');console.log(temp[k]," les datas");eval(temp[k])}
+										for (var kk=0;kk<temp.length;kk++){console.log('');console.log(temp[kk]," les datas");eval(temp[kk])}
 							     	}
 					     			catch(err){console.log('first error');console.log(err);console.log(JarvisIAPlugins[JarvisIANomPlugins[i]][j+1]);eval(JarvisIAPlugins[JarvisIANomPlugins[i]][j+1])}
 					     			try{
