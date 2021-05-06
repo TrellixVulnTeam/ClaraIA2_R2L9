@@ -64,7 +64,7 @@ for(var a=0;a<files.length;a++){
     			}
 /////////////////
 ////////////////no rules
-
+console.log(JarvisIAPlugins)
 if(filestxtNoRules!==""){//console.log("lazy !!").replace(new RegExp("</tag>","gi"),"")
     filestxtNoRules=filestxtNoRules.replace(new RegExp('<NoRules>','gi'),'')
         JarvisIAPluginsNoRules[files[a].toLowerCase()]=[]

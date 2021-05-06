@@ -9,6 +9,8 @@ var reg=["de ","qui est","recherche","  "]
 for(var a=0;a<reg.length;a++){
 temp=temp.replace(reg[a],"")
 }
+temp=temp.replace('€','euros')
+//temp=temp.replace(new RegExp(" ", 'ig'),"-")
 temp=temp.replace("œ","oe")
 temp=temp.trim()
 var url2="https://www.google.fr/search?q="+temp
@@ -33,7 +35,7 @@ console.log("en 2 :"+rechercheencart2)
 				console.log('');console.log("en 4 : "+rechercheencart4)
  var rechercheencart5=$('html body div#main div div.ZINbbc.xpd.O9g5cc.uUPGi div.kCrYT div div.BNeawe.s3v9rd.AP7Wnd div div.BNeawe.s3v9rd.AP7Wnd').eq(0).text()
 				console.log('');console.log("en 5 : "+rechercheencart5)
-				
+if(rechercheencart0.length>0){JarvisIASpeech(rechercheencart0);return}				
 if(rechercheencart3.length>0){JarvisIASpeech(rechercheencart3);return}
 if(rechercheencart5.length>0){JarvisIASpeech(rechercheencart5);return}
 JarvisIASpeech("désolé je n'ai rien trouvé")
