@@ -1,3 +1,3 @@
 # JarvisIA2
-w 10 node js V 14.16.0
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!only for W10 or later
+Windows 10 Node.js Version 14.16.0
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Seulement pour Windows 10 et plus
